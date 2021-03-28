@@ -20,7 +20,7 @@ namespace BlazorFinanceNews.Data
 
             // IMPORTANT! Go here first to get your own x-rapidapi-key: https://rapidapi.com/apidatacenter-api-data/api/yahoo-finance15
 
-            client.DefaultRequestHeaders.Add("x-rapidapi-key", "c9fa1e73ddmshe7b02f8018130b4p164618jsn88999a8a0cad");
+            client.DefaultRequestHeaders.Add("x-rapidapi-key", "PUT YOUR API KEY HERE");
             
             client.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance15.p.rapidapi.com");
 

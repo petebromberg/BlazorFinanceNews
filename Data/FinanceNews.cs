@@ -16,10 +16,7 @@ namespace BlazorFinanceNews.Data
 
         public string guid { get; set; }
 
-
-
         public void Dispose() => Dispose(true);
-
 
         protected virtual void Dispose(bool disposing)
         {
