@@ -1,0 +1,46 @@
+﻿@page "/fetchdata"
+
+@using BlazorFinanceNews.Data
+@inject FinanceNewsService ForecastService
+
+<h1>Finance News</h1>
+
+  
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Link </th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                 <td>@forecast.title</td>
+                    <td>@forecast.pubDate.ToShortDateString()</td>
+                    <td><a href=@forecast.link>@forecast.title</a> </td>
+                    <td>@forecast.source</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private FinanceNews[] forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await new FinanceNewsService().GetFinanceNewsAsync();
+    }
+}
