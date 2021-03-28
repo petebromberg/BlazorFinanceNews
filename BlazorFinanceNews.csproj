@@ -3,11 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Data\WeatherForecast.cs" />
-    <Compile Remove="Data\WeatherForecastService.cs" />
-  </ItemGroup>
+ 
 
   <ItemGroup>
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0-preview.2.21154.6" />
